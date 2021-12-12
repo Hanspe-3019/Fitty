@@ -27,7 +27,7 @@ final class DecodeWithBroadcaster:
     }
     
     func onFileIdMesg(_ mesg: FITFileIdMesg) {
-        print("\(mesg.description) \(mesg.getType())")
+        print("File: \(toText( mesg.getType() ) )")
         cntFileId += 1
     }
     
@@ -58,10 +58,8 @@ final class DecodeWithBroadcaster:
 
             for num in nums.keys {
                 let cntString = String(format: "%8d", nums[num] ?? -1)
-                print(
-                    "\(toText(num).padding(toLength: 20, withPad: " ", startingAt: 0))" +
-                    ": \(cntString)"
-                )
+                let keyString = "\(toText(num).padding(toLength: 20, withPad: " ", startingAt: 0))"
+                print("\(keyString): \(cntString)")
             }
         } else {
             print("** Some Error **")
