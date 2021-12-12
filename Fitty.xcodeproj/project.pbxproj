@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2C4DF9BB27639BEF00FB5B2B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4DF9BA27639BEF00FB5B2B /* main.swift */; };
+		2C545B432764FE9F00682CB6 /* FIT in Frameworks */ = {isa = PBXBuildFile; productRef = 2C545B422764FE9F00682CB6 /* FIT */; };
+		2C545B4527661B7100682CB6 /* MesgNum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C545B4427661B7100682CB6 /* MesgNum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		2C4DF9B727639BEF00FB5B2B /* Fitty */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Fitty; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C4DF9BA27639BEF00FB5B2B /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		2C4DF9C127639C7500FB5B2B /* objcpp */ = {isa = PBXFileReference; lastKnownFileType = folder; name = objcpp; path = ../../FitSDKRelease_21.67.00/objcpp; sourceTree = "<group>"; };
+		2C545B4427661B7100682CB6 /* MesgNum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MesgNum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C545B432764FE9F00682CB6 /* FIT in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,8 +46,10 @@
 		2C4DF9AE27639BEF00FB5B2B = {
 			isa = PBXGroup;
 			children = (
+				2C4DF9C127639C7500FB5B2B /* objcpp */,
 				2C4DF9B927639BEF00FB5B2B /* Fitty */,
 				2C4DF9B827639BEF00FB5B2B /* Products */,
+				2C4DF9C227639CB000FB5B2B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,8 +65,16 @@
 			isa = PBXGroup;
 			children = (
 				2C4DF9BA27639BEF00FB5B2B /* main.swift */,
+				2C545B4427661B7100682CB6 /* MesgNum.swift */,
 			);
 			path = Fitty;
+			sourceTree = "<group>";
+		};
+		2C4DF9C227639CB000FB5B2B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,6 +93,9 @@
 			dependencies = (
 			);
 			name = Fitty;
+			packageProductDependencies = (
+				2C545B422764FE9F00682CB6 /* FIT */,
+			);
 			productName = Fitty;
 			productReference = 2C4DF9B727639BEF00FB5B2B /* Fitty */;
 			productType = "com.apple.product-type.tool";
@@ -120,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C545B4527661B7100682CB6 /* MesgNum.swift in Sources */,
 				2C4DF9BB27639BEF00FB5B2B /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,6 +305,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2C545B422764FE9F00682CB6 /* FIT */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FIT;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2C4DF9AF27639BEF00FB5B2B /* Project object */;
 }
