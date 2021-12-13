@@ -9,15 +9,17 @@ import Foundation
 import ObjcFIT
 import SwiftFIT
 
+
 final class DecodeWithBroadcaster:
     NSObject,
     FITMesgDelegate,
-    FITFileIdMesgDelegate,
-    FITMonitoringMesgDelegate
+    FITFileIdMesgDelegate
+//  FITMonitoringMesgDelegate
 {
-    
     var cntMesg = 0
     var cntFileId = 0
+    var lastTimestamp: FITDateTime = 0
+    var lastSteps: FITUInt32 = 0
     var nums: [FITMesgNum: Int] = [:]
 
     func onMesg(_ mesg: FITMessage) {
@@ -29,11 +31,6 @@ final class DecodeWithBroadcaster:
     func onFileIdMesg(_ mesg: FITFileIdMesg) {
         print("File: \(toText( mesg.getType() ) )")
         cntFileId += 1
-    }
-    
-    func onMonitoringMesg(_ mesg: FITMonitoringMesg) {
-        let ts = mesg.getTimestamp()
-        print("HR: \(mesg.getHeartRate())  \(ts) = \(ts.date)")
     }
     
     init(path: String) {
@@ -68,7 +65,7 @@ final class DecodeWithBroadcaster:
     }
 
 }
-                                         
+
 /* main */
 
 _ = DecodeWithBroadcaster(path: "/Users/mb/Downloads/FIT/forerunner/Monitor/MCA00000.fit")

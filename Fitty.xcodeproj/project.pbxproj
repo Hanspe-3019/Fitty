@@ -11,6 +11,7 @@
 		2C545B432764FE9F00682CB6 /* FIT in Frameworks */ = {isa = PBXBuildFile; productRef = 2C545B422764FE9F00682CB6 /* FIT */; };
 		2C545B4527661B7100682CB6 /* MesgNum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C545B4427661B7100682CB6 /* MesgNum.swift */; };
 		2C545B472766330C00682CB6 /* FileTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C545B462766330C00682CB6 /* FileTypes.swift */; };
+		2C545B4A2767937E00682CB6 /* onmonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C545B492767937E00682CB6 /* onmonitor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,7 @@
 		2C4DF9C127639C7500FB5B2B /* objcpp */ = {isa = PBXFileReference; lastKnownFileType = folder; name = objcpp; path = ../../FitSDKRelease_21.67.00/objcpp; sourceTree = "<group>"; };
 		2C545B4427661B7100682CB6 /* MesgNum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MesgNum.swift; sourceTree = "<group>"; };
 		2C545B462766330C00682CB6 /* FileTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileTypes.swift; sourceTree = "<group>"; };
+		2C545B492767937E00682CB6 /* onmonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onmonitor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				2C4DF9BA27639BEF00FB5B2B /* main.swift */,
 				2C545B4427661B7100682CB6 /* MesgNum.swift */,
 				2C545B462766330C00682CB6 /* FileTypes.swift */,
+				2C545B492767937E00682CB6 /* onmonitor.swift */,
 			);
 			path = Fitty;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 				2C545B4527661B7100682CB6 /* MesgNum.swift in Sources */,
 				2C4DF9BB27639BEF00FB5B2B /* main.swift in Sources */,
 				2C545B472766330C00682CB6 /* FileTypes.swift in Sources */,
+				2C545B4A2767937E00682CB6 /* onmonitor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
