@@ -12,6 +12,7 @@
 		2C545B4527661B7100682CB6 /* MesgNum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C545B4427661B7100682CB6 /* MesgNum.swift */; };
 		2C545B472766330C00682CB6 /* FileTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C545B462766330C00682CB6 /* FileTypes.swift */; };
 		2C545B4A2767937E00682CB6 /* onmonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C545B492767937E00682CB6 /* onmonitor.swift */; };
+		2C545B4E2767A5F000682CB6 /* Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C545B4D2767A5F000682CB6 /* Decode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +34,7 @@
 		2C545B4427661B7100682CB6 /* MesgNum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MesgNum.swift; sourceTree = "<group>"; };
 		2C545B462766330C00682CB6 /* FileTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileTypes.swift; sourceTree = "<group>"; };
 		2C545B492767937E00682CB6 /* onmonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onmonitor.swift; sourceTree = "<group>"; };
+		2C545B4D2767A5F000682CB6 /* Decode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				2C545B4427661B7100682CB6 /* MesgNum.swift */,
 				2C545B462766330C00682CB6 /* FileTypes.swift */,
 				2C545B492767937E00682CB6 /* onmonitor.swift */,
+				2C545B4D2767A5F000682CB6 /* Decode.swift */,
 			);
 			path = Fitty;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C545B4527661B7100682CB6 /* MesgNum.swift in Sources */,
+				2C545B4E2767A5F000682CB6 /* Decode.swift in Sources */,
 				2C4DF9BB27639BEF00FB5B2B /* main.swift in Sources */,
 				2C545B472766330C00682CB6 /* FileTypes.swift in Sources */,
 				2C545B4A2767937E00682CB6 /* onmonitor.swift in Sources */,
