@@ -14,6 +14,7 @@ final class DecodeWithBroadcaster:
     FITMesgDelegate,
     FITFileIdMesgDelegate
 {
+    var beVerbose = false
     var cntMesg = 0
     var cntFileId = 0
     var lastTimestamp: FITDateTime = 0
@@ -27,12 +28,15 @@ final class DecodeWithBroadcaster:
     }
     
     func onFileIdMesg(_ mesg: FITFileIdMesg) {
-        print("is type \(toText( mesg.getType() ) )")
+        if beVerbose {
+            print("is type \(toText( mesg.getType() ) )")
+        }
         cntFileId += 1
     }
     
-    init?(path: String) {
+    init?(path: String, verbose: Bool) {
         super.init()
+        self.beVerbose = verbose
         let decoder = FITDecoder()
         
         let broadcaster = FITMessageBroadcaster()
@@ -40,22 +44,26 @@ final class DecodeWithBroadcaster:
         broadcaster.fitFileIdMesgDelegate = self
         broadcaster.mesgDelegate = self
         broadcaster.fitMonitoringMesgDelegate = self
+        broadcaster.fitRecordMesgDelegate = self
         let valid = decoder.isFIT(path) && decoder.checkIntegrity(path) ? "" : "FIT File not valid"
         
         if valid.count > 0 {
             print("\n")
             return nil
         }
-        
-        print("File: \(path) \(valid)", separator: " ", terminator: " ")
+        if beVerbose {
+            print("File: \(path) \(valid)", separator: " ", terminator: " ")
+        }
     
         if decoder.decodeFile(path) {
-            print("\(cntMesg) Messages,  \(cntFileId) FileId")
-
-            for num in nums.keys {
-                let cntString = String(format: "%8d", nums[num] ?? -1)
-                let keyString = "\(toText(num).padding(toLength: 20, withPad: " ", startingAt: 0))"
-                print("\(keyString): \(cntString)")
+            if beVerbose {
+                print("\(cntMesg) Messages,  \(cntFileId) FileId")
+            
+                for num in nums.keys {
+                    let cntString = String(format: "%8d", nums[num] ?? -1)
+                    let keyString = "\(toText(num).padding(toLength: 20, withPad: " ", startingAt: 0))"
+                    print("\(keyString): \(cntString)")
+                }
             }
         } else {
             print("** Some Error happened during decodeFile() **")
