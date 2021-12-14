@@ -9,7 +9,6 @@ import Foundation
 import ObjcFIT
 import SwiftFIT
 
-
 final class DecodeWithBroadcaster:
     NSObject,
     FITMesgDelegate,

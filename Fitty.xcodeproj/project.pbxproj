@@ -13,6 +13,7 @@
 		2C545B472766330C00682CB6 /* FileTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C545B462766330C00682CB6 /* FileTypes.swift */; };
 		2C545B4A2767937E00682CB6 /* onmonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C545B492767937E00682CB6 /* onmonitor.swift */; };
 		2C545B4E2767A5F000682CB6 /* Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C545B4D2767A5F000682CB6 /* Decode.swift */; };
+		2C61CA5A27689405009C9A33 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 2C61CA5927689405009C9A33 /* ArgumentParser */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C61CA5A27689405009C9A33 /* ArgumentParser in Frameworks */,
 				2C545B432764FE9F00682CB6 /* FIT in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -104,6 +106,7 @@
 			name = Fitty;
 			packageProductDependencies = (
 				2C545B422764FE9F00682CB6 /* FIT */,
+				2C61CA5927689405009C9A33 /* ArgumentParser */,
 			);
 			productName = Fitty;
 			productReference = 2C4DF9B727639BEF00FB5B2B /* Fitty */;
@@ -133,6 +136,9 @@
 				Base,
 			);
 			mainGroup = 2C4DF9AE27639BEF00FB5B2B;
+			packageReferences = (
+				2C61CA5827689405009C9A33 /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
+			);
 			productRefGroup = 2C4DF9B827639BEF00FB5B2B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -318,10 +324,26 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		2C61CA5827689405009C9A33 /* XCRemoteSwiftPackageReference "swift-argument-parser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-argument-parser.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		2C545B422764FE9F00682CB6 /* FIT */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = FIT;
+		};
+		2C61CA5927689405009C9A33 /* ArgumentParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2C61CA5827689405009C9A33 /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
+			productName = ArgumentParser;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
