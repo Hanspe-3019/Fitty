@@ -10,38 +10,50 @@ import Foundation
 import ArgumentParser
 
 struct decode: ParsableCommand {
-    @Flag var verbose = false
+    @Flag(help: "turn on some statistics" )
+    var verbose = false
     
-    @Argument(help: "Pathes to FIT file")
-    var path: [String]
+    @Argument(help: "One or more pathes to FIT file")
+    var pathes: [String]
     
     static let commandName = URL(fileURLWithPath: CommandLine.arguments[0]).lastPathComponent
     static let configuration = CommandConfiguration(
         commandName: commandName,
-        abstract: "Extract Heart rates from FIT Monitoring File"
+        abstract: "Extract Heart rates from FIT Files",
+        discussion: """
+This tool uses the FitSDK to parse FIT files for heart rates.
+File types supported are Activity and Monitoring.
+
+Heart rates are written to stdout as text lines with
+- Filetype REC or MON
+- localized timestamp, e.g. german dd.MM.yyyy, hh:mm:ss
+- Heart rate in bpm
+The fields are separated by tab.
+"""
     )
     
     mutating func validate() throws {
 
-        guard !path.isEmpty else {
+        guard !pathes.isEmpty else {
             throw ValidationError("Please provide at least one element to choose from.")
         }
-        for thePath in path {
+        for path in pathes {
             var isDirectory : ObjCBool = false
-            if FileManager.default.fileExists(atPath: thePath, isDirectory: &isDirectory) {
+            if FileManager.default.fileExists(atPath: path, isDirectory: &isDirectory) {
                 guard !isDirectory.boolValue else {
-                    throw ValidationError("\(thePath) is a directory")
+                    throw ValidationError("\(path) is a directory")
                 }
                 
             } else {
-                throw ValidationError("File \(thePath) does not exist")
+                throw ValidationError("File \(path) does not exist")
             }
         }
     }
 
     func run() throws {
-        for the_path in path {
-            guard let _ = DecodeWithBroadcaster(path: the_path, verbose: verbose) else {
+        let decoder = DecodeWithBroadcaster(verbose: verbose)
+        for the_path in pathes {
+            guard try decoder.decode(the_path) else {
                 throw ValidationError("Error while decoding")
             }
         }
