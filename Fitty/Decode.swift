@@ -14,6 +14,7 @@ final class DecodeWithBroadcaster:
     FITMesgDelegate,
     FITFileIdMesgDelegate
 {
+    let formatter = DateFormatter()
     var beVerbose = false
     var cntMesg = 0
     var cntFileId = 0
@@ -39,6 +40,9 @@ final class DecodeWithBroadcaster:
         self.beVerbose = verbose
         let decoder = FITDecoder()
         
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .medium
+       
         let broadcaster = FITMessageBroadcaster()
         decoder.mesgDelegate = broadcaster
         broadcaster.fitFileIdMesgDelegate = self

@@ -13,8 +13,8 @@
 		2C545B472766330C00682CB6 /* FileTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C545B462766330C00682CB6 /* FileTypes.swift */; };
 		2C545B4A2767937E00682CB6 /* onmonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C545B492767937E00682CB6 /* onmonitor.swift */; };
 		2C545B4E2767A5F000682CB6 /* Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C545B4D2767A5F000682CB6 /* Decode.swift */; };
-		2C61CA5A27689405009C9A33 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 2C61CA5927689405009C9A33 /* ArgumentParser */; };
 		2C61CA5C2768CE3D009C9A33 /* onrecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C61CA5B2768CE3D009C9A33 /* onrecord.swift */; };
+		2CA9D59A276B4AF900D1DEE5 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 2CA9D599276B4AF900D1DEE5 /* ArgumentParser */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -45,7 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C61CA5A27689405009C9A33 /* ArgumentParser in Frameworks */,
+				2CA9D59A276B4AF900D1DEE5 /* ArgumentParser in Frameworks */,
 				2C545B432764FE9F00682CB6 /* FIT in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -109,7 +109,7 @@
 			name = Fitty;
 			packageProductDependencies = (
 				2C545B422764FE9F00682CB6 /* FIT */,
-				2C61CA5927689405009C9A33 /* ArgumentParser */,
+				2CA9D599276B4AF900D1DEE5 /* ArgumentParser */,
 			);
 			productName = Fitty;
 			productReference = 2C4DF9B727639BEF00FB5B2B /* Fitty */;
@@ -123,7 +123,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1310;
-				LastUpgradeCheck = 1310;
+				LastUpgradeCheck = 1320;
 				TargetAttributes = {
 					2C4DF9B627639BEF00FB5B2B = {
 						CreatedOnToolsVersion = 13.1;
@@ -140,7 +140,7 @@
 			);
 			mainGroup = 2C4DF9AE27639BEF00FB5B2B;
 			packageReferences = (
-				2C61CA5827689405009C9A33 /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
+				2CA9D598276B4AF900D1DEE5 /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
 			);
 			productRefGroup = 2C4DF9B827639BEF00FB5B2B /* Products */;
 			projectDirPath = "";
@@ -286,6 +286,7 @@
 		2C4DF9BF27639BEF00FB5B2B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q9ZPPSVJTP;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -297,6 +298,7 @@
 		2C4DF9C027639BEF00FB5B2B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q9ZPPSVJTP;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -329,7 +331,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		2C61CA5827689405009C9A33 /* XCRemoteSwiftPackageReference "swift-argument-parser" */ = {
+		2CA9D598276B4AF900D1DEE5 /* XCRemoteSwiftPackageReference "swift-argument-parser" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/apple/swift-argument-parser.git";
 			requirement = {
@@ -344,9 +346,9 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = FIT;
 		};
-		2C61CA5927689405009C9A33 /* ArgumentParser */ = {
+		2CA9D599276B4AF900D1DEE5 /* ArgumentParser */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2C61CA5827689405009C9A33 /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
+			package = 2CA9D598276B4AF900D1DEE5 /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
 			productName = ArgumentParser;
 		};
 /* End XCSwiftPackageProductDependency section */

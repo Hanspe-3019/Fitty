@@ -16,7 +16,6 @@ extension DecodeWithBroadcaster:
     
     
     func onMonitoringMesg(_ mesg: FITMonitoringMesg) {
-        let msgid = "MON-\(cntMesg)".padding(toLength: 10, withPad: " ", startingAt: 0)
         let hr = mesg.getHeartRate()
         let hasHR = hr < FITUInt8.max
         let steps = mesg.getSteps()
@@ -42,7 +41,7 @@ extension DecodeWithBroadcaster:
             date = FITDate(timestamp: step2).date
         }
         if hasHR {
-        print("\(msgid) HR: \(hr)  \(date)")
+            print("MON\t\(formatter.string(from: date))\t\(hr)")
         }
     }
     

@@ -14,14 +14,14 @@ extension DecodeWithBroadcaster:
     FITRecordMesgDelegate
 {
     func onRecordMesg(_ mesg: FITRecordMesg) {
-        let msgid = "REC-\(cntMesg)".padding(toLength: 10, withPad: " ", startingAt: 0)
+        
         let hr = mesg.getHeartRate()
                 
         let fitDate = mesg.getTimestamp()
         let date = fitDate.date
         
         if ( fitDate.timestamp < FITDateTime.max ) && hr < FITUInt8.max {
-            print("\(msgid) HR: \(hr)  \(date)")
+            print("REC\t\(formatter.string(from:date))\t\(hr)")
         }
     }
     
