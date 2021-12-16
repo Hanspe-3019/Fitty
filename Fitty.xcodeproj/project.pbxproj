@@ -30,7 +30,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2C4DF9B727639BEF00FB5B2B /* Fitty */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Fitty; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C4DF9B727639BEF00FB5B2B /* heartrates */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = heartrates; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C4DF9BA27639BEF00FB5B2B /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		2C4DF9C127639C7500FB5B2B /* objcpp */ = {isa = PBXFileReference; lastKnownFileType = folder; name = objcpp; path = ../../FitSDKRelease_21.67.00/objcpp; sourceTree = "<group>"; };
 		2C545B4427661B7100682CB6 /* MesgNum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MesgNum.swift; sourceTree = "<group>"; };
@@ -66,7 +66,7 @@
 		2C4DF9B827639BEF00FB5B2B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2C4DF9B727639BEF00FB5B2B /* Fitty */,
+				2C4DF9B727639BEF00FB5B2B /* heartrates */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,9 +94,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2C4DF9B627639BEF00FB5B2B /* Fitty */ = {
+		2C4DF9B627639BEF00FB5B2B /* heartrates */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2C4DF9BE27639BEF00FB5B2B /* Build configuration list for PBXNativeTarget "Fitty" */;
+			buildConfigurationList = 2C4DF9BE27639BEF00FB5B2B /* Build configuration list for PBXNativeTarget "heartrates" */;
 			buildPhases = (
 				2C4DF9B327639BEF00FB5B2B /* Sources */,
 				2C4DF9B427639BEF00FB5B2B /* Frameworks */,
@@ -106,13 +106,13 @@
 			);
 			dependencies = (
 			);
-			name = Fitty;
+			name = heartrates;
 			packageProductDependencies = (
 				2C545B422764FE9F00682CB6 /* FIT */,
 				2CA9D599276B4AF900D1DEE5 /* ArgumentParser */,
 			);
 			productName = Fitty;
-			productReference = 2C4DF9B727639BEF00FB5B2B /* Fitty */;
+			productReference = 2C4DF9B727639BEF00FB5B2B /* heartrates */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -146,7 +146,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2C4DF9B627639BEF00FB5B2B /* Fitty */,
+				2C4DF9B627639BEF00FB5B2B /* heartrates */,
 			);
 		};
 /* End PBXProject section */
@@ -319,7 +319,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2C4DF9BE27639BEF00FB5B2B /* Build configuration list for PBXNativeTarget "Fitty" */ = {
+		2C4DF9BE27639BEF00FB5B2B /* Build configuration list for PBXNativeTarget "heartrates" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2C4DF9BF27639BEF00FB5B2B /* Debug */,
